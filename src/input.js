@@ -3,7 +3,45 @@ import { connect } from 'react-redux';
 
 import { guessWord } from "./actions";
 
-class Input extends Component{
+// class Input extends Component{
+//     render() {
+//         const contents = this.props.success
+//             ? null
+//             : (
+//                 <form className="form-inline">
+//                     <input
+//                         data-test="input-box"
+//                         className="mb-2 mx-sm-3"
+//                         type="text"
+//                         placeholder="enter guess"
+//                         />
+//                     <button
+//                         data-test="submit-button"
+//                         type="submit"
+//                         className="btn btn-primary mb-2">
+//                         Submit
+//                     </button>
+//                 </form>
+//             );
+//
+//         return (
+//             <div data-test="component-input">
+//                 {contents}
+//             </div>
+//         )
+//     }
+// }
+//
+// const mapStateToProps = ({success}) => {
+//   return { success };
+// };
+//
+// export default connect(mapStateToProps, { guessWord })(Input);
+
+
+
+// mock用
+export class UnconnectedInput extends Component{
     render() {
         const contents = this.props.success
             ? null
@@ -14,10 +52,11 @@ class Input extends Component{
                         className="mb-2 mx-sm-3"
                         type="text"
                         placeholder="enter guess"
-                        />
+                    />
                     <button
                         data-test="submit-button"
                         type="submit"
+                        onClick={() => this.props.guessWord('train')}
                         className="btn btn-primary mb-2">
                         Submit
                     </button>
@@ -30,10 +69,10 @@ class Input extends Component{
             </div>
         )
     }
-};
+}
 
 const mapStateToProps = ({success}) => {
-  return { success };
+    return { success };
 };
 
-export default connect(mapStateToProps, { guessWord })(Input);
+export default connect(mapStateToProps, { guessWord })(UnconnectedInput);
