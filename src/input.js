@@ -40,7 +40,6 @@ import { guessWord } from "./actions";
 
 
 
-// mock用
 export class UnconnectedInput extends Component{
 
     constructor(props) {

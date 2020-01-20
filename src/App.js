@@ -7,7 +7,6 @@ import Input from './input';
 
 import { getSecretWord } from "./actions";
 
-// mock用
 export class UnconnectedApp extends Component{
     componentDidMount() {
         // get the secret word

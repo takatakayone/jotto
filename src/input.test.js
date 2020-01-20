@@ -10,7 +10,7 @@ const setup = (initialState={}) => {
     return wrapper;
 };
 
-describe('render', () => {
+describe('render check', () => {
  describe('word has not been guessed', () => {
     let wrapper;
     beforeEach(() => {
@@ -74,7 +74,6 @@ describe('redux props', () => {
 });
 
 
-//mock用
 describe("guessWord action creator call", () => {
     let guessWordMock;
     let wrapper;

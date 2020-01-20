@@ -72,7 +72,7 @@ describe('correctGuess action dispatcher', () => {
                 secretWord,
                 success: true,
                 guessedWords: [...guessedWords, { guessedWord: secretWord, letterMatchCount: 5}]
-            }
+            };
 
             expect(newState).toEqual(expectedState);
         });
